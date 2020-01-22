@@ -3,8 +3,9 @@ import React from 'react';
 import { StyleSheet } from 'react-native';
 import AppNavigator from './routes';
 
-import { ApplicationProvider, Layout, Text, Button } from '@ui-kitten/components';
+import { ApplicationProvider, Layout, Text, Button, IconRegistry } from '@ui-kitten/components';
 import { mapping, light as lightTheme } from '@eva-design/eva';
+import { EvaIconsPack } from '@ui-kitten/eva-icons';
 
 export default function App() {
   return (
@@ -12,10 +13,13 @@ export default function App() {
     //   <Text>Open up App.tsx to start working on your app!</Text>
     // </View>
     // <AppNavigator/>
+    <React.Fragment>
+      <IconRegistry icons={EvaIconsPack} />
+      <ApplicationProvider mapping={mapping} theme={lightTheme}>
+        <AppNavigator/>
+      </ApplicationProvider>
+    </React.Fragment>
 
-    <ApplicationProvider mapping={mapping} theme={lightTheme}>
-      <AppNavigator/>
-    </ApplicationProvider>
   );
 }
 

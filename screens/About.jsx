@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 // import { Text, View, Button } from 'react-native'
-import { ApplicationProvider, Layout, Text } from '@ui-kitten/components';
+import { ApplicationProvider, Layout, Text, Button } from '@ui-kitten/components';
 import { mapping, light as lightTheme } from '@eva-design/eva';
 
 export default class About extends Component {
@@ -26,6 +26,7 @@ export default class About extends Component {
             
             <Layout style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
                 <Text category='h1'>About</Text>
+                <Button onPress={()=>{this.props.navigation.goBack()}}>Go Back</Button>
             </Layout>
         )
     }
