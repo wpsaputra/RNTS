@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 // import { Text, View, Button } from 'react-native'
 
-import { ApplicationProvider, Layout, Text, Button, Icon } from '@ui-kitten/components';
+import { ApplicationProvider, Layout, Text, Button, Icon, ButtonGroup } from '@ui-kitten/components';
 import { mapping, light as lightTheme } from '@eva-design/eva';
-import { View, Dimensions } from 'react-native';
+import { View, Dimensions, TouchableOpacity } from 'react-native';
+import { Card } from 'react-native-paper';
+import { TouchableHighlight, Text as TextNative } from 'react-native';
 
 export default class Home extends Component {
     static navigationOptions = {
@@ -32,7 +34,7 @@ export default class Home extends Component {
             // </ApplicationProvider>
 
             // <Layout style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-            <Layout style={{flex: 1, alignItems: 'center'}}>
+            <Layout style={{flex: 1, alignItems: 'center', backgroundColor: "#f9f9f9"}}>
                 {/* <View style={{width: this.width, height: this.width, backgroundColor:"blue", borderRadius: this.width/2, position: "absolute", left: 0, top: -this.width/2, scaleX: 1.5}} /> */}
                 
                 {/* <View style={{width: this.width, height: this.width, backgroundColor:"blue", borderRadius: this.width/2, position: "absolute", left: 0, top: -(this.width/2), transform: [{scaleX: 1.5}] }} />
@@ -51,10 +53,117 @@ export default class Home extends Component {
                                 <Text style={{color: "white", fontSize: 16}}>Hi</Text>
                                 <Text style={{color: "white", fontSize: 16}}>Selamat Datang</Text>
                             </View>
-                            <Icon name="bell" width={32} height={32} fill="white"/>
+                            <Icon name="bell-outline" width={32} height={32} fill="white"/>
                         </View>
                     </View>
                 </View>
+
+                <Layout style={{width: "100%", paddingLeft: 20, paddingRight: 20, backgroundColor: "#f9f9f9"}}>
+                    <Card style={{width: "100%", marginTop: -50, paddingLeft: 0, paddingRight:0, paddingTop: 16}} elevation={4} >
+                        <View style={{paddingLeft: 20, paddingRight: 20}}>
+                            <Text style={{fontSize: 16}}>Total</Text>
+                            <Text style={{fontSize: 16, fontWeight: "bold"}}>Rp. 3.000.000</Text>
+                        </View>
+                        <View style={{width: "100%", display: "flex", flexDirection: "row", marginTop: 10}}>
+                            {/* <TouchableHighlight style={{width: "50%"}} underlayColor="#DDDDDD" onPress={()=>{}}>
+                                <TextNative>Riwayat</TextNative>
+                            </TouchableHighlight> */}
+                            <TouchableHighlight style={{width: "50%", display: "flex", alignItems: "center", borderColor: "#f4f4f4", borderWidth: 1, borderRightWidth: 0, padding: 10}} underlayColor="#DDDDDD" onPress={()=>{}}>
+                                <View style={{display: "flex", flexDirection: "row", alignItems: "center"}}>
+                                    <Icon name='clock' width={24} height={24} fill='#ffab4b'/>
+                                    <TextNative style={{color: "#ffab4b", marginLeft: 10}}>Riwayat</TextNative>
+                                </View>
+                            </TouchableHighlight>
+                            <TouchableHighlight style={{width: "50%", display: "flex", alignItems: "center", borderColor: "#f4f4f4", borderWidth: 1, padding: 10}} underlayColor="#DDDDDD" onPress={()=>{}}>
+                                <View style={{display: "flex", flexDirection: "row", alignItems: "center"}}>
+                                    <Icon name='plus-circle-outline' width={24} height={24} fill='#5988f2'/>
+                                    <TextNative style={{color: "#5988f2", marginLeft: 10}}>Isi Saldo</TextNative>
+                                </View>
+                            </TouchableHighlight>
+                        </View>
+                    </Card>
+                </Layout>
+
+                <View style={{display: "flex", width: "100%", marginTop:10, paddingLeft: 20, paddingRight: 20,flexDirection: "row", flexWrap: "wrap", justifyContent: "space-between"}}>
+                    <Card style={{width: "30%", marginTop: 10, borderRadius:10}} elevation={4}>
+                        <TouchableHighlight style={{width: "100%", display: "flex", alignItems: "center", paddingTop:10, paddingBottom: 10, borderRadius:10}} underlayColor="#DDDDDD" onPress={()=>{}}>
+                            <View style={{width: "100%", display: "flex", justifyContent: "center", alignItems: "center"}}>
+                                <View style={{width: 60, height: 60, borderRadius: 30, backgroundColor: "#e4f3fe", justifyContent: "center", alignItems: "center"}}>
+                                    <Icon name="gift-outline" width={32} height={32} fill="#5ab3f8"></Icon>
+                                </View>
+                                <Text style={{fontSize: 12, marginTop: 5, fontWeight: "600"}}>Bayar SPP</Text>
+                            </View>
+                        </TouchableHighlight>
+                    </Card>
+
+                    <Card style={{width: "30%", marginTop: 10, borderRadius:10}} elevation={4}>
+                        <TouchableHighlight style={{width: "100%", display: "flex", alignItems: "center", paddingTop:10, paddingBottom: 10, borderRadius:10}} underlayColor="#DDDDDD" onPress={()=>{}}>
+                            <View style={{width: "100%", display: "flex", justifyContent: "center", alignItems: "center"}}>
+                                <View style={{width: 60, height: 60, borderRadius: 30, backgroundColor: "#e4f3fe", justifyContent: "center", alignItems: "center"}}>
+                                    <Icon name="gift-outline" width={32} height={32} fill="#5ab3f8"></Icon>
+                                </View>
+                                <Text style={{fontSize: 12, marginTop: 5, fontWeight: "600"}}>Bayar SPP</Text>
+                            </View>
+                        </TouchableHighlight>
+                    </Card>
+
+                    <Card style={{width: "30%", marginTop: 10, borderRadius:10}} elevation={4}>
+                        <TouchableHighlight style={{width: "100%", display: "flex", alignItems: "center", paddingTop:10, paddingBottom: 10, borderRadius:10}} underlayColor="#DDDDDD" onPress={()=>{}}>
+                            <View style={{width: "100%", display: "flex", justifyContent: "center", alignItems: "center"}}>
+                                <View style={{width: 60, height: 60, borderRadius: 30, backgroundColor: "#e4f3fe", justifyContent: "center", alignItems: "center"}}>
+                                    <Icon name="gift-outline" width={32} height={32} fill="#5ab3f8"></Icon>
+                                </View>
+                                <Text style={{fontSize: 12, marginTop: 5, fontWeight: "600"}}>Bayar SPP</Text>
+                            </View>
+                        </TouchableHighlight>
+                    </Card>
+
+                    <Card style={{width: "30%", marginTop: 20, borderRadius:10}} elevation={4}>
+                        <TouchableHighlight style={{width: "100%", display: "flex", alignItems: "center", paddingTop:10, paddingBottom: 10, borderRadius:10}} underlayColor="#DDDDDD" onPress={()=>{}}>
+                            <View style={{width: "100%", display: "flex", justifyContent: "center", alignItems: "center"}}>
+                                <View style={{width: 60, height: 60, borderRadius: 30, backgroundColor: "#e4f3fe", justifyContent: "center", alignItems: "center"}}>
+                                    <Icon name="gift-outline" width={32} height={32} fill="#5ab3f8"></Icon>
+                                </View>
+                                <Text style={{fontSize: 12, marginTop: 5, fontWeight: "600"}}>Bayar SPP</Text>
+                            </View>
+                        </TouchableHighlight>
+                    </Card>
+
+                    <Card style={{width: "30%", marginTop: 20, borderRadius:10}} elevation={4}>
+                        <TouchableHighlight style={{width: "100%", display: "flex", alignItems: "center", paddingTop:10, paddingBottom: 10, borderRadius:10}} underlayColor="#DDDDDD" onPress={()=>{}}>
+                            <View style={{width: "100%", display: "flex", justifyContent: "center", alignItems: "center"}}>
+                                <View style={{width: 60, height: 60, borderRadius: 30, backgroundColor: "#e4f3fe", justifyContent: "center", alignItems: "center"}}>
+                                    <Icon name="gift-outline" width={32} height={32} fill="#5ab3f8"></Icon>
+                                </View>
+                                <Text style={{fontSize: 12, marginTop: 5, fontWeight: "600"}}>Bayar SPP</Text>
+                            </View>
+                        </TouchableHighlight>
+                    </Card>
+
+                    <Card style={{width: "30%", marginTop: 20, borderRadius:10}} elevation={4}>
+                        <TouchableHighlight style={{width: "100%", display: "flex", alignItems: "center", paddingTop:10, paddingBottom: 10, borderRadius:10}} underlayColor="#DDDDDD" onPress={()=>{}}>
+                            <View style={{width: "100%", display: "flex", justifyContent: "center", alignItems: "center"}}>
+                                <View style={{width: 60, height: 60, borderRadius: 30, backgroundColor: "#e4f3fe", justifyContent: "center", alignItems: "center"}}>
+                                    <Icon name="gift-outline" width={32} height={32} fill="#5ab3f8"></Icon>
+                                </View>
+                                <Text style={{fontSize: 12, marginTop: 5, fontWeight: "600"}}>Bayar SPP</Text>
+                            </View>
+                        </TouchableHighlight>
+                    </Card>
+                </View>
+
+                <View style={{width: "100%", padding: 20, marginTop: 20}}>
+                    <Text category="h6">Log Aktivitas</Text>
+                    <Card style={{marginTop: 10, padding: 20}}>
+                        <View style={{width: "100%", display: "flex", flexDirection:"row", justifyContent: "space-between"}}>
+                            <Text style={{maxWidth: "70%", color: "red"}} numberOfLines={1}>Tidak hadir di pelajaran sejarah</Text>
+                            <Text style={{maxWidth: "30%"}}>23 Nov 2019</Text>
+                        </View>
+                    </Card>
+                </View>
+
+
+
             </Layout>
         )
     }
