@@ -162,7 +162,7 @@ export default class Home extends Component {
                     </Card>
                 </View>
 
-                <View style={{width: "100%", backgroundColor: "white", height: 60, position: "absolute", bottom: 0, display: "flex", flexDirection:"row", justifyContent: "space-around", alignItems: "center"}}>
+                <View style={{width: "100%", backgroundColor: "white", height: 60, position: "absolute", bottom: 0, display: "flex", flexDirection:"row", justifyContent: "space-around", alignItems: "center", elevation: 24}}>
                     <Icon name="home" width={32} height={32} fill="#ffab4b"></Icon>
                     <Icon name="github" width={32} height={32} fill="#bbbbbb"></Icon>
                     <Icon name="people" width={32} height={32} fill="#bbbbbb"></Icon>
