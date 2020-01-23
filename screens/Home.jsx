@@ -68,13 +68,13 @@ export default class Home extends Component {
                             {/* <TouchableHighlight style={{width: "50%"}} underlayColor="#DDDDDD" onPress={()=>{}}>
                                 <TextNative>Riwayat</TextNative>
                             </TouchableHighlight> */}
-                            <TouchableHighlight style={{width: "50%", display: "flex", alignItems: "center", borderColor: "#f4f4f4", borderWidth: 1, borderRightWidth: 0, padding: 10}} underlayColor="#DDDDDD" onPress={()=>{}}>
+                            <TouchableHighlight style={{width: "50%", display: "flex", alignItems: "center", borderColor: "#f4f4f4", borderWidth: 1, borderRightWidth: 0, borderBottomWidth: 0, borderLeftWidth: 0, padding: 10}} underlayColor="#DDDDDD" onPress={()=>{}}>
                                 <View style={{display: "flex", flexDirection: "row", alignItems: "center"}}>
                                     <Icon name='clock' width={24} height={24} fill='#ffab4b'/>
                                     <TextNative style={{color: "#ffab4b", marginLeft: 10}}>Riwayat</TextNative>
                                 </View>
                             </TouchableHighlight>
-                            <TouchableHighlight style={{width: "50%", display: "flex", alignItems: "center", borderColor: "#f4f4f4", borderWidth: 1, padding: 10}} underlayColor="#DDDDDD" onPress={()=>{}}>
+                            <TouchableHighlight style={{width: "50%", display: "flex", alignItems: "center", borderColor: "#f4f4f4", borderWidth: 1, borderBottomWidth: 0, borderRightWidth: 0, padding: 10}} underlayColor="#DDDDDD" onPress={()=>{}}>
                                 <View style={{display: "flex", flexDirection: "row", alignItems: "center"}}>
                                     <Icon name='plus-circle-outline' width={24} height={24} fill='#5988f2'/>
                                     <TextNative style={{color: "#5988f2", marginLeft: 10}}>Isi Saldo</TextNative>
@@ -152,7 +152,7 @@ export default class Home extends Component {
                     </Card>
                 </View>
 
-                <View style={{width: "100%", padding: 20, marginTop: 20}}>
+                <View style={{width: "100%", padding: 20, marginTop: 20}} elevation={4}>
                     <Text category="h6">Log Aktivitas</Text>
                     <Card style={{marginTop: 10, padding: 20}}>
                         <View style={{width: "100%", display: "flex", flexDirection:"row", justifyContent: "space-between"}}>
@@ -162,7 +162,11 @@ export default class Home extends Component {
                     </Card>
                 </View>
 
-
+                <View style={{width: "100%", backgroundColor: "white", height: 60, position: "absolute", bottom: 0, display: "flex", flexDirection:"row", justifyContent: "space-around", alignItems: "center"}}>
+                    <Icon name="home" width={32} height={32} fill="#ffab4b"></Icon>
+                    <Icon name="github" width={32} height={32} fill="#bbbbbb"></Icon>
+                    <Icon name="people" width={32} height={32} fill="#bbbbbb"></Icon>
+                </View>
 
             </Layout>
         )
