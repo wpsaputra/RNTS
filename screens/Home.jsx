@@ -86,7 +86,7 @@ export default class Home extends Component {
 
                 <View style={{display: "flex", width: "100%", marginTop:10, paddingLeft: 20, paddingRight: 20,flexDirection: "row", flexWrap: "wrap", justifyContent: "space-between"}}>
                     <Card style={{width: "30%", marginTop: 10, borderRadius:10}} elevation={4}>
-                        <TouchableHighlight style={{width: "100%", display: "flex", alignItems: "center", paddingTop:10, paddingBottom: 10, borderRadius:10}} underlayColor="#DDDDDD" onPress={()=>{}}>
+                        <TouchableHighlight style={{width: "100%", display: "flex", alignItems: "center", paddingTop:10, paddingBottom: 10, borderRadius:10}} underlayColor="#DDDDDD" onPress={()=>{this.props.navigation.navigate('LoginNav')}}>
                             <View style={{width: "100%", display: "flex", justifyContent: "center", alignItems: "center"}}>
                                 <View style={{width: 60, height: 60, borderRadius: 30, backgroundColor: "#e4f3fe", justifyContent: "center", alignItems: "center"}}>
                                     <Icon name="gift-outline" width={32} height={32} fill="#5ab3f8"></Icon>
@@ -97,7 +97,7 @@ export default class Home extends Component {
                     </Card>
 
                     <Card style={{width: "30%", marginTop: 10, borderRadius:10}} elevation={4}>
-                        <TouchableHighlight style={{width: "100%", display: "flex", alignItems: "center", paddingTop:10, paddingBottom: 10, borderRadius:10}} underlayColor="#DDDDDD" onPress={()=>{}}>
+                        <TouchableHighlight style={{width: "100%", display: "flex", alignItems: "center", paddingTop:10, paddingBottom: 10, borderRadius:10}} underlayColor="#DDDDDD" onPress={()=>{this.props.navigation.navigate('AboutNav')}}>
                             <View style={{width: "100%", display: "flex", justifyContent: "center", alignItems: "center"}}>
                                 <View style={{width: 60, height: 60, borderRadius: 30, backgroundColor: "#e4f3fe", justifyContent: "center", alignItems: "center"}}>
                                     <Icon name="gift-outline" width={32} height={32} fill="#5ab3f8"></Icon>
@@ -108,7 +108,7 @@ export default class Home extends Component {
                     </Card>
 
                     <Card style={{width: "30%", marginTop: 10, borderRadius:10}} elevation={4}>
-                        <TouchableHighlight style={{width: "100%", display: "flex", alignItems: "center", paddingTop:10, paddingBottom: 10, borderRadius:10}} underlayColor="#DDDDDD" onPress={()=>{}}>
+                        <TouchableHighlight style={{width: "100%", display: "flex", alignItems: "center", paddingTop:10, paddingBottom: 10, borderRadius:10}} underlayColor="#DDDDDD" onPress={()=>{this.props.navigation.navigate('ScrollNav')}}>
                             <View style={{width: "100%", display: "flex", justifyContent: "center", alignItems: "center"}}>
                                 <View style={{width: 60, height: 60, borderRadius: 30, backgroundColor: "#e4f3fe", justifyContent: "center", alignItems: "center"}}>
                                     <Icon name="gift-outline" width={32} height={32} fill="#5ab3f8"></Icon>
